@@ -1,0 +1,40 @@
+name: minecraft-mod build
+
+on:
+  push:
+    paths:
+      - 'project-four-minecraft-mod/**'
+      - '.github/workflows/minecraft-mod.yml'
+  pull_request:
+    paths:
+      - 'project-four-minecraft-mod/**'
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: project-four-minecraft-mod
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: setup jdk
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: make gradlew executable
+        run: chmod +x ./gradlew
+
+      - name: build
+        run: ./gradlew build --stacktrace
+
+      - name: upload mod jar
+        uses: actions/upload-artifact@v4
+        with:
+          name: rubymod
+          path: project-four-minecraft-mod/build/libs/
