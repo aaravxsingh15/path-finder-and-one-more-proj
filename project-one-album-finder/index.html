@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Album Finder &middot; Spotify API</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://api.spotify.com" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <h1>Album Finder</h1>
+    </div>
+    <button id="settingsBtn" class="ghost-btn" title="Spotify credentials">API keys</button>
+  </header>
+
+  <main>
+    <section class="search-wrap">
+      <form id="searchForm" autocomplete="off">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search an artist&hellip;  e.g. Kendrick Lamar"
+          aria-label="Artist name"
+        />
+        <button type="submit">Find albums</button>
+      </form>
+      <p id="status" class="status" role="status"></p>
+    </section>
+
+    <section id="artistCard" class="artist-card" hidden>
+      <img id="artistImg" alt="" />
+      <div class="artist-meta">
+        <h2 id="artistName"></h2>
+        <p id="artistFollowers"></p>
+        <div id="artistGenres" class="chips"></div>
+      </div>
+    </section>
+
+    <section class="controls" id="controls" hidden>
+      <div class="count" id="albumCount"></div>
+      <div class="filters">
+        <label><input type="checkbox" id="fAlbum" checked /> Albums</label>
+        <label><input type="checkbox" id="fSingle" /> Singles &amp; EPs</label>
+        <label><input type="checkbox" id="fCompilation" /> Compilations</label>
+        <label><input type="checkbox" id="fAppears" /> Appears on</label>
+        <select id="sortBy">
+          <option value="date-desc">Newest first</option>
+          <option value="date-asc">Oldest first</option>
+          <option value="name-asc">Title A&ndash;Z</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <dialog id="settingsDialog">
+    <form method="dialog" id="settingsForm">
+      <h3>Spotify API credentials</h3>
+      <p class="hint">
+        Create an app at
+        <a href="https://developer.spotify.com/dashboard" target="_blank" rel="noopener">developer.spotify.com/dashboard</a>,
+        then paste the Client ID and Client Secret below. They are stored only in this browser's
+        <code>localStorage</code> and used to request a client-credentials token.
+      </p>
+      <label>Client ID
+        <input id="clientId" type="text" required spellcheck="false" />
+      </label>
+      <label>Client Secret
+        <input id="clientSecret" type="password" required spellcheck="false" />
+      </label>
+      <menu>
+        <button value="cancel" class="ghost-btn" formnovalidate>Cancel</button>
+        <button value="save" id="saveKeys">Save</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <footer class="foot">
+    Built with the <a href="https://developer.spotify.com/documentation/web-api" target="_blank" rel="noopener">Spotify Web API</a>.
+    Not affiliated with Spotify.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

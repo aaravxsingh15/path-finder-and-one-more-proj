@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "food",
+	"pattern": [
+		"RRR",
+		"RAR",
+		"RRR"
+	],
+	"key": {
+		"R": {
+			"item": "rubymod:ruby"
+		},
+		"A": {
+			"item": "minecraft:apple"
+		}
+	},
+	"result": {
+		"item": "rubymod:ruby_apple",
+		"count": 1
+	}
+}

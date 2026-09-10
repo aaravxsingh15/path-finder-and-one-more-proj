@@ -1,0 +1,13 @@
+# OS
+*.DS_Store
+Thumbs.db
+
+# editors
+.idea/
+.vscode/
+*.iml
+
+# project 4 (Gradle) build output — see project-four-minecraft-mod/.gitignore
+**/.gradle/
+**/build/
+**/run/

@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "rubymod",
+	"version": "${version}",
+	"name": "Ruby Mod",
+	"description": "Adds a Ruby crafting material and an edible Ruby Apple.",
+	"authors": [
+		"aaravxsingh15"
+	],
+	"contact": {
+		"sources": "https://github.com/aaravxsingh15/path-finder-and-one-more-proj"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rubymod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.aaravsingh.rubymod.RubyMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
