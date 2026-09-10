@@ -8,7 +8,7 @@ item (two, actually):
 | **Ruby**       | crafting material | shows up in the *Ingredients* creative tab                  |
 | **Ruby Apple** | food              | `nutrition 6`, `saturation 1.2`, always edible; craftable   |
 
-![lang](https://img.shields.io/badge/Java-17-orange) ![loader](https://img.shields.io/badge/Fabric-1.20.1-blue)
+![lang](https://img.shields.io/badge/Java-17-orange) ![loader](https://img.shields.io/badge/Fabric-1.20.1-blue) [![build](https://github.com/aaravxsingh15/path-finder-and-one-more-proj/actions/workflows/minecraft-mod.yml/badge.svg)](https://github.com/aaravxsingh15/path-finder-and-one-more-proj/actions/workflows/minecraft-mod.yml)
 
 ## Craft a Ruby Apple
 

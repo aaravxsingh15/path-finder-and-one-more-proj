@@ -1,5 +1,7 @@
 # path-finder-and-one-more-proj
 
+[![minecraft-mod build](https://github.com/aaravxsingh15/path-finder-and-one-more-proj/actions/workflows/minecraft-mod.yml/badge.svg)](https://github.com/aaravxsingh15/path-finder-and-one-more-proj/actions/workflows/minecraft-mod.yml)
+
 Two projects from the "code in a day" list, each in its own folder.
 
 | # | Folder | Language | What it does |
